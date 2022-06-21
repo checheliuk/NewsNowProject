@@ -1,0 +1,15 @@
+﻿<script id="articleTmpl" type="text/x-jquery-tmpl">
+    {{each Articles}}
+    <a href="/home/article/${ArticleID}" title="@Resource.Details"></a>
+    <a href="${Url}" id="${ArticleID}" class="article-item{{if IsUpadateData }} article-item-active{{/if}}" target="_blank" rel="nofollow" title="@Resource.Details">
+        <div class="panel-body">
+            <i class="index ${Icon}" title="${SourceTitle}"></i>
+            <h3 class="title">${Title}</h3>
+            <div>
+                <span class="date-title">${GetDate(Date)}</span>
+                <span class="article-details">@Resource.Details</span>
+            </div>
+        </div>
+    </a>
+    {{/each}}
+</script>

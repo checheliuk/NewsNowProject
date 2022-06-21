@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsNowProject.Domain", "NewsNowProject.Domain\NewsNowProject.Domain.csproj", "{647901DB-46CF-46C1-98E1-01301CD53525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsNowProject.WebUI", "NewsNowProject.WebUI\NewsNowProject.WebUI.csproj", "{29A6C39F-218B-44F0-BB63-628094C17EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsNowProject.Parser", "NewsNowProject.Parser\NewsNowProject.Parser.csproj", "{7AF10071-BE0D-419B-83C2-EC5CCDA3A012}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsNowProject.Resources", "NewsNowProject.Resources\NewsNowProject.Resources.csproj", "{D805322D-67B8-42F0-9F3E-6E3A3AD57322}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsNowProject.ProxyListApi", "NewsNowProject.ProxyListApi\NewsNowProject.ProxyListApi.csproj", "{E11C2374-8A9A-4E42-9AF8-CAC8A8EAF5AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsNowProject.ConsoleAppJobs", "NewsNowProject.ConsoleAppJobs\NewsNowProject.ConsoleAppJobs.csproj", "{14DD888E-EFA0-4E12-AC48-593C84458987}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{D7A75936-924F-4BCD-B412-39DB747A5183}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewsNowProject.Resources", "NewsNowProject.Resources", "{DE006A10-141A-41C4-89D4-0691DD7C8090}"
+	ProjectSection(SolutionItems) = preProject
+		C:\NewsNowProject.Resources\chromedriver.exe = C:\NewsNowProject.Resources\chromedriver.exe
+		C:\NewsNowProject.Resources\Logoff.bat = C:\NewsNowProject.Resources\Logoff.bat
+		C:\NewsNowProject.Resources\mock-up.jpg = C:\NewsNowProject.Resources\mock-up.jpg
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{647901DB-46CF-46C1-98E1-01301CD53525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647901DB-46CF-46C1-98E1-01301CD53525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647901DB-46CF-46C1-98E1-01301CD53525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647901DB-46CF-46C1-98E1-01301CD53525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A6C39F-218B-44F0-BB63-628094C17EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A6C39F-218B-44F0-BB63-628094C17EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A6C39F-218B-44F0-BB63-628094C17EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A6C39F-218B-44F0-BB63-628094C17EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF10071-BE0D-419B-83C2-EC5CCDA3A012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF10071-BE0D-419B-83C2-EC5CCDA3A012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF10071-BE0D-419B-83C2-EC5CCDA3A012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF10071-BE0D-419B-83C2-EC5CCDA3A012}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D805322D-67B8-42F0-9F3E-6E3A3AD57322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D805322D-67B8-42F0-9F3E-6E3A3AD57322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D805322D-67B8-42F0-9F3E-6E3A3AD57322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D805322D-67B8-42F0-9F3E-6E3A3AD57322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E11C2374-8A9A-4E42-9AF8-CAC8A8EAF5AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E11C2374-8A9A-4E42-9AF8-CAC8A8EAF5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E11C2374-8A9A-4E42-9AF8-CAC8A8EAF5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E11C2374-8A9A-4E42-9AF8-CAC8A8EAF5AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14DD888E-EFA0-4E12-AC48-593C84458987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14DD888E-EFA0-4E12-AC48-593C84458987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14DD888E-EFA0-4E12-AC48-593C84458987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14DD888E-EFA0-4E12-AC48-593C84458987}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE006A10-141A-41C4-89D4-0691DD7C8090} = {D7A75936-924F-4BCD-B412-39DB747A5183}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6099383B-54E8-4D76-BBA5-047CC309F410}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://checheliuk.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = NewsNowProject.Domain\\NewsNowProject.Domain.csproj
+		SccProjectName1 = NewsNowProject.Domain
+		SccLocalPath1 = NewsNowProject.Domain
+		SccProjectUniqueName2 = NewsNowProject.WebUI\\NewsNowProject.WebUI.csproj
+		SccProjectName2 = NewsNowProject.WebUI
+		SccLocalPath2 = NewsNowProject.WebUI
+		SccProjectUniqueName3 = NewsNowProject.Parser\\NewsNowProject.Parser.csproj
+		SccProjectName3 = NewsNowProject.Parser
+		SccLocalPath3 = NewsNowProject.Parser
+		SccProjectUniqueName4 = NewsNowProject.Resources\\NewsNowProject.Resources.csproj
+		SccProjectName4 = NewsNowProject.Resources
+		SccLocalPath4 = NewsNowProject.Resources
+		SccProjectUniqueName5 = NewsNowProject.ProxyListApi\\NewsNowProject.ProxyListApi.csproj
+		SccProjectName5 = NewsNowProject.ProxyListApi
+		SccLocalPath5 = NewsNowProject.ProxyListApi
+		SccProjectUniqueName6 = NewsNowProject.ConsoleAppJobs\\NewsNowProject.ConsoleAppJobs.csproj
+		SccProjectName6 = NewsNowProject.ConsoleAppJobs
+		SccLocalPath6 = NewsNowProject.ConsoleAppJobs
+	EndGlobalSection
+EndGlobal

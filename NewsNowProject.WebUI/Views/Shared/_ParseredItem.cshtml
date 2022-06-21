@@ -1,0 +1,68 @@
+﻿@model NewsNowProject.Domain.ViewModel.ArticleHomeContentViewModel
+@{
+    var source = Model.Article.Source == Model.Advertising.Source ? Model.Advertising : Model.SourceContent.FirstOrDefault(x => x.Source == Model.Article.Source);
+
+    var serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+
+    var text = new List<string>();
+    if (!string.IsNullOrEmpty(Model.Article.Text))
+    {
+        text = serializer.Deserialize<List<string>>(Model.Article.Text);
+    }
+
+    var photo = new List<NewsNowProject.Domain.ViewModel.ImageModel>();
+
+    if (!string.IsNullOrEmpty(Model.Article.Photo))
+    {
+        photo = serializer.Deserialize<List<NewsNowProject.Domain.ViewModel.ImageModel>>(Model.Article.Photo);
+    }
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+<div class="fixed-btn-group">
+    <div class="btn-group-vertical" role="group">
+        <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+        </button>
+    </div>
+</div>
+
+<div class="article-block">
+    <div class="article-header">
+        <div class="header-source">
+            <span>@Resource.Source</span>
+            <a href="@Model.Article.Url" target="_blank" rel="nofollow">
+                <i class="index @(source?.Icon)" title="@(source?.Title)"></i>
+            </a>
+        </div>
+        <h1 class="header-h1">
+            @Model.Article.Title
+        </h1>
+    </div>
+    <div class="article-text">
+        @foreach (var item in text)
+        {
+            <p>@item</p>
+        }
+    </div>
+</div>
+
+<div class="tz-gallery">
+    <div class="row">
+        @foreach (var item in photo)
+        {
+            <div class="col-xs-4 col-md-2">
+                <div class="thumbnail">
+                    <a class="lightbox" href="@item.Url">
+                        <img src="@item.Url" alt="@item.Alt" class="article-image">
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

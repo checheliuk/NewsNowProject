@@ -1,0 +1,51 @@
+﻿@model NewsNowProject.Domain.ViewModel.IndexHomeContentViewModel
+@{
+    ViewBag.Title = Resource.Title;
+}
+@Html.Partial("_FilterPanel", Model)
+@Html.Partial("~/Views/Templates/_ArticleTemplat.cshtml")
+<div id="article-container">
+    @foreach (var item in Model.ArticleData.Articles)
+    {
+        @Html.Partial("_ArticleItem", new NewsNowProject.Domain.ViewModel.ArticleHomeContentViewModel() {  Advertising = Model.Advertising,
+                                                                                                           SourceContent = Model.SourceContent,
+                                                                                                           Article = item })
+    }
+</div>
+<div id="preload-item"> 
+    <div class="loader"></div>
+    <div class="loader-gif"></div>
+</div>
+<span class="index icon-scrollup scrollup">@Resource.OnTop</span>
+<hr />
+<footer>
+    <h1>@Resource.H1</h1>
+    <p class="text-center">&copy; @DateTime.Now.Year - <b><i>NewsNow</i></b></p>
+</footer>
+@section scripts{
+    <script type="text/javascript">
+        var sourceContent = @Html.Raw(Json.Encode(Model.SourceContent));
+        var advertisingContent = @Html.Raw(Json.Encode(Model.Advertising));
+        var sourceContentCount = @Html.Raw(Json.Encode(Model.SourceContentCount));
+        var filterCookiesName = @Html.Raw(Json.Encode(Model.CookiesName));
+        var isAutoLoadEnabled = @Html.Raw(Json.Encode(Model.ArticleData.IsAutoLoadEnabled == false ? "null" : "false"));
+        var parameters = {
+            NextArticleId: @Html.Raw(Json.Encode(Model.ArticleData.NextArticleId)),
+            Filter: [],
+            IsAllFiterSelected: true };
+    </script>
+    @Scripts.Render("~/home/index")
+    <script src="~/signalr/hubs"></script>
+}
+@section head {
+    @if (Model.ArticleData.PrevPage != null)
+    {
+        <link rel="prev" href="@(HttpContext.Current.Request.Url + "home/page/" + Model.ArticleData.PrevPage)"/>
+    } else if (Model.ArticleData.PrevPageOnIndex) {
+        <link rel="prev" href="@(HttpContext.Current.Request.Url + "home/page/")"/>
+    }
+    @if (Model.ArticleData.NextPage != null)
+    {
+        <link rel="next" href="@(HttpContext.Current.Request.Url + "home/page/"+ Model.ArticleData.NextPage)"/>
+    }
+}

@@ -1,0 +1,28 @@
+﻿@model NewsNowProject.Domain.ViewModel.ArticleHomeContentViewModel
+@{
+    var source = Model.Article.Source == Model.Advertising.Source ? Model.Advertising : Model.SourceContent.FirstOrDefault(x => x.Source == Model.Article.Source);
+}
+
+@if (!Model.EnableH1)
+{
+    <a href="/home/article/@Model.Article.ArticleID" title="@Resource.Details"></a>
+}
+
+<a href="@Model.Article.Url" id="@Model.Article.ArticleID" class="article-item" target="_blank" rel="nofollow" title="@Resource.Details">
+    <div class="panel-body">
+        <i class="index @(source?.Icon)" title="@(source?.Title)"></i>
+        @if (Model.EnableH1)
+        {
+            <h1 class="title">@Model.Article.Title</h1>
+        }
+        else
+        {
+            <h3 class="title">@Model.Article.Title</h3>
+        }
+        <div>
+            <span class="date-title">@Model.Article.Date.ToString("dddd, d MMMM, HH:mm").ToLower()</span>
+            <span class="article-details">@Resource.Details</span>
+        </div>
+    </div>
+</a>
+

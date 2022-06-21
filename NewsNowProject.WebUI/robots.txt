@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://newsnow.vn.ua/sitemap.xml

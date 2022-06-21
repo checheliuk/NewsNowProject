@@ -1,0 +1,37 @@
+﻿@model NewsNowProject.Domain.ViewModel.IndexHomeContentViewModel
+
+<div id="filter">
+    <div id="filter-header">
+        <span class="btn-item hidden-xxs" data-toggle="modal" data-target="#welcome-message-block">@Resource.About</span>
+        <span id="open-filter-btn-item" class="btn-item">
+            @Resource.Filter
+            <span class="hidden-xs">@Resource.FilterNews</span>
+        </span>
+        <span id="filter-icon-panel">
+            @foreach (var item in Model.SourceContent)
+            {
+                <i id="source-icon-item-@item.Source" class="index @item.Icon source-icon-item@(!Model.FilterCookies.FilterParametr.Contains(item.Source)? " display-none" : String.Empty)" title="@item.Name"></i>
+            }
+        </span>
+    </div>
+    <div id="filter-body" class="panel panel-default article-item">
+        <div class="panel-body">
+            @foreach (var item in Model.SourceContent)
+            {
+                <div class="col-xxs-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 box-source-item">
+                    <input type="checkbox" id="source-item-@item.Source" name="filter" value="@item.Source" @(Model.FilterCookies.FilterParametr.Contains(item.Source)? "checked" : String.Empty)>
+                    <label for="source-item-@item.Source" class="label-source-item">
+                        <i class="index @item.Icon" title="@item.Title"></i>
+                        <span>@item.Name</span>
+                    </label>
+                </div>
+            }
+        </div>
+        <div class="panel-footer">
+            <div class="panel-footer-block-btn">
+                <span id="accept-filter-btn-item" class="btn-item">@Resource.Accept</span>
+                <span id="close-filter-btn-item" class="btn-item">@Resource.Close</span>
+            </div>
+        </div>
+    </div>
+</div>

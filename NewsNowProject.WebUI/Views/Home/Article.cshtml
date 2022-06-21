@@ -1,0 +1,48 @@
+﻿@model NewsNowProject.Domain.ViewModel.ArticleHomeContentViewModel
+@{
+    ViewBag.Title = Model.Article.Title + Resource.SubTitle;
+    ViewBag.Description = Model.Article.Description;
+    ViewBag.Image = Model.Article.Image;
+}
+
+<div id="article-container">
+    @switch (Model.Article.Status)
+    {
+        case NewsNowProject.Domain.Model.EnumModel.ArticleStatus.Active:
+
+            @Html.Partial("_ArticleItem", Model)
+            <a href="/" class="article-item">
+                <div class="panel-body other-button">
+                    @Resource.Other
+                </div>
+            </a>
+
+            break;
+        case NewsNowProject.Domain.Model.EnumModel.ArticleStatus.Parsered:
+            @Html.Partial("_ParseredItem", Model)
+            break;
+    }
+</div>
+
+
+@section scripts{
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>*@
+    <script type="text/javascript">
+            (function () {
+                if (window.CHITIKA === undefined) { window.CHITIKA = { 'units': [] }; };
+                var widthStyle = window.innerWidth > 550 ? 'style="width: 550px;"' : style = 'style="width: 320px;"';
+                var unit = window.innerWidth > 550 ? { "calltype": "async[2]", "publisher": "Checheliuk", "width": 550, "height": 250, "sid": "Chitika Default" }
+                    : { "calltype": "async[2]", "publisher": "Checheliuk", "width": 320, "height": 50, "sid": "Chitika Default" };
+                var placement_id = window.CHITIKA.units.length;
+                window.CHITIKA.units.push(unit);
+                document.write('<div id="chitikaAdBlock-' + placement_id + '" class="advertising-block" ' + widthStyle + '></div>');
+            }());
+        </script>
+        <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+}
+
+
+

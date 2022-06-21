@@ -1,0 +1,82 @@
+/*
+This is an example of how to use the image sprite in your own CSS files
+*/
+.index {
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+.index.advertising {
+	width: 32px;
+	height: 32px;
+	background-position: 0 0;
+}
+.index.ivininfo {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -32px;
+}
+.index.mistovnua {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -64px;
+}
+.index.myvin {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -96px;
+}
+.index.v0432 {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -128px;
+}
+.index.vezha {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -160px;
+}
+.index.vingovua {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -192px;
+}
+.index.vinnitsainfo {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -224px;
+}
+.index.vinnitsaok {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -256px;
+}
+.index.vlasnoinfo {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -288px;
+}
+.index.vn20minut {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -320px;
+}
+.index.vndepo {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -352px;
+}
+.index.facebook-icon {
+	width: 32px;
+	height: 32px;
+	background-position: 0 -384px;
+}
+.index.logo {
+	width: 242px;
+	height: 38px;
+	background-position: 0 -416px;
+}
+.index.icon-scrollup {
+	width: 80px;
+	height: 80px;
+	background-position: 0 -454px;
+}

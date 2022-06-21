@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="uk-UA">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="apple-touch-icon-precomposed" href="/favicon.png"/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="keywords" content="@Resource.Keywords"/>
+    <meta name="robots" content="all" /> 
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@(ViewBag.Description ?? Resource.Description)"/>
+    <meta property="og:url" content="@HttpContext.Current.Request.Url"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@(ViewBag.Title ?? Resource.Title)"/>
+    <meta property="og:description" content="@(ViewBag.Description ?? Resource.Description)"/>
+    <meta property="og:image" content="@(ViewBag.Image ?? "http://newsnow.vn.ua/image/content/facebook-promo-icon.png")"/>
+    <meta property="og:image:alt" content="News Now"/>
+    <link rel="apple-touch-icon" href="~/Image/Content/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="~/image/content/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="~/image/content/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="~/image/content/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="~/image/content/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="~/image/content/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="~/image/content/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="~/image/content/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="~/image/content/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="~/image/content/apple-touch-icon.png"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@HttpContext.Current.Request.Url" />
+    <meta name="twitter:title" content="@(ViewBag.Title ?? Resource.Title)" />
+    <meta name="twitter:description" content="@(ViewBag.Description ?? Resource.Description)" />
+    <meta name="twitter:image" content="@(ViewBag.Image ?? "http://newsnow.vn.ua/image/content/facebook-promo-icon.png")" />
+    <meta name="google-site-verification" content="bWlp5WiMzW9B5p_9nj7PJGeSRklvBMP6pzb51cnQA1A" />
+    <link rel="icon" sizes="180x180" href="~/image/content/apple-touch-icon.png">
+    @RenderSection("head", required: false)
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    @Html.Partial("_ModalDialogPanel")
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <span class="navbar-brand logo-content">
+                    <a href="/" class="index logo" title="News Now"></a>
+                </span>
+                <a class="navbar-brand visible-xs float-right nav-btn" data-toggle="modal" data-target="#support-project-block" title="@Resource.Support">@Resource.Support</a>
+            </div>
+            <div class="navbar-collapse collapse hidden-xs">
+                <a class="navbar-brand nav-btn float-right" data-toggle="modal" data-target="#support-project-block" title="@Resource.Support">@Resource.Support</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <div id="fb-root"></div>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108559821-1"></script>
+    @Scripts.Render("~/all-script")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

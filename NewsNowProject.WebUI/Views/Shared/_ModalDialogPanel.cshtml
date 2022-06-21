@@ -1,0 +1,65 @@
+﻿<div id="support-project-block" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2>Як можна підтримати?</h2>
+                <ul>
+                    <li>Якщо у вас є цікаві ідеї щодо проекту ми радо їх вислухаємо. Присилайте їх на електрону адресу зазначену нижче.</li>
+                    <li>Надавайте посилання вашим друзям у соцмережах та додавайте посилання на ваших сайтах.</li>
+                    <li>Ви можете зробити грошове пожертвування на розвиток проекту, переказавши кошти на рахунок: ПриватБанк - <a href="https://sendmoney.privatbank.ua/ua/?hash=2943874425" class="label label-default label-blue" target="_blank" rel="nofollow" title="ПриватБанк">4731 2191 0259 4656</a></li>
+                </ul>
+                <hr />
+                <strong>Для співпраці</strong><br />
+                <small>Телефон:</small> <a href="tel:+380632753857" class="label label-default label-blue" title="Телефон">+380632753857</a><br />
+                <small>Пошта:</small> <a href="mailto:sasha.checheliuk@gmail.com" class="label label-default label-blue" title="Пошта">sasha.checheliuk@gmail.com</a>
+            </div>
+            <div class="modal-footer">
+                <div class="facebok-share-box">
+                    @Html.Partial("_FaceBookShare")
+                </div>
+                <span class="btn-item" data-dismiss="modal">@Resource.Close</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="welcome-message-block" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-text-style">
+                    <h2>Привіт, Друже.</h2>
+                    <p> Хочем представити твоїй увазі проект <b><i>NewsNow</i></b>. Тут ти завжди знайдеш актуальні та головні новини Вінниччини.</p>
+                    <p>Щохвилинне оновлення новин дозволить тобі завжди бути у курсі останніх подій Вінниччини:</p>
+                    <ul>
+                        <li>репортажі з місця</li>
+                        <li>економічні проблеми</li>
+                        <li>політика</li>
+                        <li>охорона здоров'я та багато іншого</li>
+                    </ul>
+                    <p>Читайте щодня і знай що відбувається у твоєму місті.</p>
+                </div>
+                <p class="text-right"><b>З повагою, Команда.</b></p>
+            </div>
+            <div class="modal-footer">
+                <div class="facebok-share-box">
+                    @Html.Partial("_FaceBookShare")
+                </div>
+                <span class="btn-item" data-dismiss="modal">@Resource.Close</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="about-company-block" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body" itemscope itemtype="http://schema.org/LocalBusiness">
+                <p itemprop="name">NewsNow</p>
+                @*<div><img itemprop="logo" src="logo.png" alt="Developer City Logo"></div>*@
+                <p itemprop="description">@Resource.Description</p>
+                <p>Телефон: <span itemprop="telephone">+380632753857</span></p>
+                <p>Пошта: <a href="mailto:sasha.checheliuk@gmail.com" itemprop="email" title="Пошта">sasha.checheliuk@gmail.com</a></p>
+                <p>Сайт: <a href="http://newsnow.vn.ua" itemprop="url" title="Сайт">http://newsnow.vn.ua</a></p>
+            </div>
+        </div>
+    </div>
+</div>

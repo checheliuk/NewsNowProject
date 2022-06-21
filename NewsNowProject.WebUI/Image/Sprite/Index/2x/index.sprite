@@ -1,0 +1,28 @@
+{
+  "images": {
+    "advertising": "../../../SourceIcon/2x/advertising.png",
+    "ivininfo": "../../../SourceIcon/2x/ivininfo.png",
+    "mistovnua": "../../../SourceIcon/2x/mistovnua.png",
+    "myvin": "../../../SourceIcon/2x/myvin.png",
+    "v0432": "../../../SourceIcon/2x/v0432.png",
+    "vezha": "../../../SourceIcon/2x/vezha.png",
+    "vingovua": "../../../SourceIcon/2x/vingovua.png",
+    "vinnitsainfo": "../../../SourceIcon/2x/vinnitsainfo.png",
+    "vinnitsaok": "../../../SourceIcon/2x/vinnitsaok.png",
+    "vlasnoinfo": "../../../SourceIcon/2x/vlasnoinfo.png",
+    "vn20minut": "../../../SourceIcon/2x/vn20minut.png",
+    "vndepo": "../../../SourceIcon/2x/vndepo.png",
+    "facebook-icon": "../../../Content/2x/facebook-icon.png",
+    "logo": "../../../Content/2x/logo.png",
+    "icon-scrollup": "../../../Content/2x/icon-scrollup.png"
+  },
+  "orientation": "vertical",
+  "optimize": "lossless",
+  "padding": 0,
+  "output": "png",
+  "stylesheet": "css",
+  "pathprefix": "",
+  "customstyles": {
+    "display": "inline-block"
+  }
+}
